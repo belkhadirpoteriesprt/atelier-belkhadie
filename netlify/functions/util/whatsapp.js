@@ -10,6 +10,8 @@ const TO   = process.env.TWILIO_TO;   // ex: whatsapp:+2126...
 
 async function sendVendorNotification(message) {
   if (!message) return;
+  if (!client) throw new Error("Twilio non configuré (SID/TOKEN manquants)");
+  if (!FROM || !TO) throw new Error("Paramètres WhatsApp manquants: FROM/TO");
   try {
     const result = await client.messages.create({
       body: message,
