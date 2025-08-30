@@ -83,7 +83,7 @@ export const submitOrder: RequestHandler = async (req, res) => {
       });
     }
 
-    // Générer un ID de commande unique
+    // Gén��rer un ID de commande unique
     const orderId = generateOrderId();
 
     // Préparer les données enrichies pour WhatsApp
@@ -104,9 +104,7 @@ export const submitOrder: RequestHandler = async (req, res) => {
     console.log("📱 Sending WhatsApp notification to vendor...");
     const whatsAppResult = await whatsAppService.sendOrderNotification(enrichedOrderData as any);
 
-    // Email service disabled - will be handled manually
-    console.log("📧 Email service disabled - handled manually");
-    const emailResult = { success: true, message: "Email service disabled" };
+    // Notifications email désactivées
 
     if (whatsAppResult.success) {
       console.log("✅ Order processed successfully");
@@ -117,8 +115,7 @@ export const submitOrder: RequestHandler = async (req, res) => {
         success: true,
         message: "Commande reçue avec succès ! Vous serez contacté bientôt.",
         orderId,
-        whatsAppStatus: whatsAppResult.message,
-        emailStatus: emailResult.message
+        whatsAppStatus: whatsAppResult.message
       });
     } else {
       console.error("❌ WhatsApp notification failed:", whatsAppResult.error);
