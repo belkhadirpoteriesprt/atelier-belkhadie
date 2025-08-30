@@ -304,7 +304,7 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     <Mail className="w-4 h-4 inline mr-2" />
-                    Email *
+                    Email * <span className="ml-2 text-xs text-gray-500">(envoi manuel)</span>
                   </label>
                   <input
                     type="email"
