@@ -1,7 +1,5 @@
 const { sendVendorNotification } = require('./util/whatsapp');
-const nodemailer = require('nodemailer');
 
-// Embedded creds used by services; services may also be invoked directly.
 // This function expects a POST with JSON body containing productName, quantity, customerName, phone, email.
 
 exports.handler = async function(event) {
@@ -34,20 +32,7 @@ exports.handler = async function(event) {
       return { statusCode: 502, body: JSON.stringify({ ok: false, error: e?.message || 'Twilio error' }) };
     }
 
-    // Emails en best-effort (non bloquants)
-    if (body?.email) {
-      try {
-        await require('../../server/services/emailService').sendClientConfirmation(body.email, 'Confirmation de commande - Atelier', `Merci pour votre commande. Détails: ${summary}`);
-      } catch (e) {
-        console.error('Client email error:', e && e.message ? e.message : e);
-      }
-    }
-    try {
-      await require('../../server/services/emailService').sendVendorEmail('Nouvelle commande (copie)', `Nouvelle commande reçue — ${summary}`);
-    } catch (e) {
-      console.error('Vendor email error:', e && e.message ? e.message : e);
-    }
-
+    // Aucune notification email en production (désactivée)
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
   } catch (err) {
     console.error('submit-order error:', err && err.message ? err.message : err);
