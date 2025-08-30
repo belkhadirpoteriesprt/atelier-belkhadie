@@ -1,5 +1,4 @@
 import { Layout } from "../components/Layout";
-import { Layout } from "../components/Layout";
 import { motion } from "framer-motion";
 import { Shield, Eye, Lock, Users, Mail, Phone } from "lucide-react";
 
