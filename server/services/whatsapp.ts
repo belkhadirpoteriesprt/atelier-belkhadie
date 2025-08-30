@@ -12,13 +12,45 @@ export async function sendVendorNotification(message: string) {
   if (!FROM_NUMBER || !VENDOR_NUMBER) {
     // minimal log
     console.error("Twilio not configured");
-    return { skipped: true };
+    return { skipped: true } as const;
   }
   try {
     const res = await client.messages.create({ body: message, from: FROM_NUMBER, to: VENDOR_NUMBER });
     return res;
-  } catch (err) {
+  } catch (err: any) {
     console.error("Twilio send error:", err && err.message ? err.message : err);
     throw err;
+  }
+}
+
+export class WhatsAppService {
+  async sendOrderNotification(order: {
+    orderId: string;
+    orderTotal: number;
+    customer: { name: string; surname: string; phone: string; email: string; address: string };
+    items: Array<{
+      product: { name: string; price: number; baseProduct: string; category: string };
+      quantity: number;
+      total: number;
+      variantDetails: { sizeVariantId: string; sizeName: string; sizeDescription?: string; patternId: string; patternName: string; patternColors: string[] };
+    }>;
+  }) {
+    const header = `Nouvelle commande ${order.orderId}`;
+    const customer = `Client: ${order.customer.name} ${order.customer.surname}\nEmail: ${order.customer.email}\nTéléphone: ${order.customer.phone}\nAdresse: ${order.customer.address}`;
+
+    const lines = order.items.map((item, idx) => {
+      const vd = item.variantDetails;
+      const colors = vd.patternColors.join(", ");
+      return `${idx + 1}. ${item.product.name} x${item.quantity} — ${item.total.toFixed(2)} MAD\n   Taille: ${vd.sizeName}${vd.sizeDescription ? ` (${vd.sizeDescription})` : ""}\n   Motif: ${vd.patternName} [${colors}]`;
+    });
+
+    const body = `${header}\n\n${customer}\n\nArticles:\n${lines.join("\n")}\n\nTotal: ${order.orderTotal.toFixed(2)} MAD`;
+
+    try {
+      await sendVendorNotification(body);
+      return { success: true, message: "Notification WhatsApp envoyée" } as const;
+    } catch (error: any) {
+      return { success: false, error: error?.message ?? String(error) } as const;
+    }
   }
 }
