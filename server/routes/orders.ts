@@ -92,6 +92,14 @@ export const submitOrder: RequestHandler = async (req, res) => {
       orderId,
     };
 
+    // Debug env presence (without secrets)
+    console.log("🔐 Twilio env present:", {
+      FROM: Boolean(process.env.TWILIO_FROM),
+      TO: Boolean(process.env.TWILIO_TO),
+      SID: Boolean(process.env.TWILIO_ACCOUNT_SID),
+      TOKEN: Boolean(process.env.TWILIO_AUTH_TOKEN),
+    });
+
     // Send WhatsApp notification to vendor
     console.log("📱 Sending WhatsApp notification to vendor...");
     const whatsAppResult = await whatsAppService.sendOrderNotification(enrichedOrderData as any);
