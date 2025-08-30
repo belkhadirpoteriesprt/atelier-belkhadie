@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Truck, HelpCircle } from "lucide-react";
 import { Layout } from "../components/Layout";
 
