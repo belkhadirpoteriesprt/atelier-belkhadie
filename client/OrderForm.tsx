@@ -5,12 +5,12 @@ export default function OrderForm() {
   const [productName, setProductName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [customerName, setCustomerName] = useState("");
-  const [, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
-    const body = { productName, quantity, customerName, , phone };
+    const body = { productName, quantity, customerName, email, phone };
     const res = await fetch("/.netlify/functions/submit-order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -40,7 +40,7 @@ export default function OrderForm() {
       </label>
       <br/>
       <label>Email (client)<br/>
-        <input type=" value={} onChange={e=>setEmail(e.target.value)} required/>
+        <input type="email" value={email} onChange={e=>setEmail(e.target.value)} required/>
       </label>
       <br/>
       <label>Téléphone<br/>
