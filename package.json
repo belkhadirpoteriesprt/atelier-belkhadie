@@ -74,6 +74,10 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.6.2",
     "vite": "^5.4.6",
-    "vitest": "^2.1.1"
+    "vitest": "^2.1.1",
+    "@types/react-hook-form": "^7.51.5"
+  },
+  "peerDependencies": {
+    "react-hook-form": "^7.53.0"
   }
 }
