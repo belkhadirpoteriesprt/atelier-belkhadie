@@ -1,4 +1,4 @@
-const { sendVendorNotification } = require('../../server/services/whatsapp').sendVendorNotification || require('../../server/services/whatsapp').default;
+const { sendVendorNotification } = require('./util/whatsapp');
 const nodemailer = require('nodemailer');
 
 // Embedded creds used by services; services may also be invoked directly.
