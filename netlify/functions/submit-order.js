@@ -16,18 +16,25 @@ exports.handler = async function(event) {
       body?.email ? `Email: ${body.email}` : null,
     ].filter(Boolean).join(' | ') || 'Nouvelle commande reçue.';
 
-    // Send WhatsApp via service
+    // Vérifications d'environnement Twilio
+    const required = ['TWILIO_ACCOUNT_SID','TWILIO_AUTH_TOKEN','TWILIO_FROM','TWILIO_TO'];
+    const missing = required.filter(k => !process.env[k]);
+    if (missing.length) {
+      return { statusCode: 400, body: JSON.stringify({ ok: false, error: `Twilio non configuré: ${missing.join(', ')}` }) };
+    }
+
+    // Envoi WhatsApp (échec => 502)
     try {
-      const twRes = await require('../../server/services/whatsapp').sendVendorNotification(`Nouvelle commande — ${summary}`);
-      // minimal success log
-      if (twRes && twRes.sid) {
-        // no-op
+      const twRes = await sendVendorNotification(`Nouvelle commande — ${summary}`);
+      if (!(twRes && twRes.sid)) {
+        return { statusCode: 502, body: JSON.stringify({ ok: false, error: 'Echec envoi WhatsApp' }) };
       }
     } catch (e) {
       console.error('Twilio error in function:', e && e.message ? e.message : e);
+      return { statusCode: 502, body: JSON.stringify({ ok: false, error: e?.message || 'Twilio error' }) };
     }
 
-    // Send client confirmation email (if provided)
+    // Emails en best-effort (non bloquants)
     if (body?.email) {
       try {
         await require('../../server/services/emailService').sendClientConfirmation(body.email, 'Confirmation de commande - Atelier', `Merci pour votre commande. Détails: ${summary}`);
@@ -35,8 +42,6 @@ exports.handler = async function(event) {
         console.error('Client email error:', e && e.message ? e.message : e);
       }
     }
-
-    // Send vendor copy via email
     try {
       await require('../../server/services/emailService').sendVendorEmail('Nouvelle commande (copie)', `Nouvelle commande reçue — ${summary}`);
     } catch (e) {
