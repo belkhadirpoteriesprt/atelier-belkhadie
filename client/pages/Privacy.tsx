@@ -1,4 +1,5 @@
 import { Layout } from "../components/Layout";
+import { Layout } from "../components/Layout";
 import { motion } from "framer-motion";
 import { Shield, Eye, Lock, Users, Mail, Phone } from "lucide-react";
 
@@ -70,7 +71,7 @@ export default function Privacy() {
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Nom et prénom</li>
                     <li>Numéro de téléphone</li>
-                    <li>Adresse 
+                    <li>Adresse e-mail</li>
                     <li>Adresse de livraison</li>
                     <li>Préférences de personnalisation (couleurs, motifs, tailles)</li>
                     <li>Messages et demandes spéciales</li>
