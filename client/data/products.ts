@@ -453,25 +453,23 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Table Safiote",
-    basePrice: 600,
+    basePrice: 430,
     category: "Formules spéciales",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800",
     description: "Formule complète pour table familiale traditionnelle de Safi",
     sizeVariants: [
       {
         id: "formule_complete",
         size: "Formule complète",
-        price: 600,
+        price: 430,
         description: "1 soupière + 12 bols 8cm, 2 grandes assiettes + 24 petites, 2 assiettes rectangulaires, 3 feraqa au choix",
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop"
+        image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800"
       },
     ],
     availablePatterns: commonPatterns,
     images: {
       "gallery": [
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1578749760903-03b75f5edffc?w=400&h=400&fit=crop"
+        "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800"
       ]
     },
   },
