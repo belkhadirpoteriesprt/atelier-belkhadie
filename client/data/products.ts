@@ -378,7 +378,7 @@ export const products: Product[] = [
       },
       {
         id: "pack_complet",
-        size: "Gourde + 6 verres + 6 assiettes",
+        size: "Gourde + 6 verres",
         price: 110,
         description: "Service complet à boire",
         image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F3eecfc4b088a4045886529b23b62a3fb?format=webp&width=800"
