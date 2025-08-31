@@ -453,15 +453,15 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Table Safiote",
-    basePrice: 430,
+    basePrice: 450,
     category: "Formules spéciales",
     image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800",
-    description: "Formule complète pour table familiale traditionnelle de Safi",
+    description: "Formule complète pour table familiale traditionnelle de Safi — il contient: khmissa, bolbol, soupiere+6bols, gourde+6verres, assiettes a œufs, assiette rectangulaire, assiette principal + 6 petites",
     sizeVariants: [
       {
         id: "formule_complete",
         size: "Formule complète",
-        price: 430,
+        price: 450,
         description: "1 soupière + 12 bols 8cm, 2 grandes assiettes + 24 petites, 2 assiettes rectangulaires, 3 feraqa au choix",
         image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800"
       },
