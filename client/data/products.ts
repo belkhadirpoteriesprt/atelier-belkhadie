@@ -359,7 +359,7 @@ export const products: Product[] = [
     name: "Gourde et Verres",
     basePrice: 15,
     category: "Art de la table",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F5d0532bd8dd84b259a455c07d215e98a?format=webp&width=400",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F3eecfc4b088a4045886529b23b62a3fb?format=webp&width=800",
     description: "Service à boire traditionnel en terre cuite",
     sizeVariants: [
       {
@@ -379,9 +379,9 @@ export const products: Product[] = [
       {
         id: "pack_complet",
         size: "Gourde + 6 verres + 6 assiettes",
-        price: 90,
+        price: 110,
         description: "Service complet à boire",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F1a41d7d58f6445a0b2b55caf52dcdafb?format=webp&width=400"
+        image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F3eecfc4b088a4045886529b23b62a3fb?format=webp&width=800"
       },
     ],
     availablePatterns: commonPatterns,
