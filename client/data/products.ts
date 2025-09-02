@@ -270,7 +270,7 @@ export const products: Product[] = [
       {
         id: "12cm",
         size: "12 cm",
-        price: 10,
+        price: 20,
         description: "Tajine individuel",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fa927d76d2a344e26a0e874259409829b?format=webp&width=400"
       },
