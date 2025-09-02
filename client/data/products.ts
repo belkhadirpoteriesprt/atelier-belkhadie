@@ -338,7 +338,7 @@ export const products: Product[] = [
       {
         id: "bol_12cm",
         size: "Bol 12cm",
-        price: 10,
+        price: 20,
         description: "Bol grand format",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
