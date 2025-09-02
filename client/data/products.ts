@@ -227,7 +227,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Qassria Traditionnelle",
-    basePrice: 50,
+    basePrice: 60,
     category: "Poterie décorative",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fab239efef22f431e8fcb3e14300660b8?format=webp&width=400",
     description:
@@ -235,22 +235,22 @@ export const products: Product[] = [
     sizeVariants: [
       { 
         id: "35cm", 
-        size: "35 cm", 
-        price: 50, 
+        size: "35 cm",
+        price: 60, 
         description: "Petite taille",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fab239efef22f431e8fcb3e14300660b8?format=webp&width=400"
       },
       { 
         id: "40cm", 
-        size: "40 cm", 
-        price: 60, 
+        size: "40 cm",
+        price: 70, 
         description: "Taille moyenne",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F4b0e13d990aa4159a1e08db525e89746?format=webp&width=400"
       },
       { 
         id: "45cm", 
-        size: "45 cm", 
-        price: 70, 
+        size: "45 cm",
+        price: 80, 
         description: "Grande taille",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fab239efef22f431e8fcb3e14300660b8?format=webp&width=400"
       },
