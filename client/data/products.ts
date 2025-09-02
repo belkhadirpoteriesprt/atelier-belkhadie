@@ -290,7 +290,7 @@ export const products: Product[] = [
       {
         id: "petite",
         size: "Petite assiette",
-        price: 8,
+        price: 13,
         description: "Assiette individuelle",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Ff3e53dadda404802bd643e83ce72c310?format=webp&width=400"
       },
