@@ -302,6 +302,13 @@ export const products: Product[] = [
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb2fea3dac3ba45baae6ddcb69815359c?format=webp&width=400"
       },
       {
+        id: "service_complet_12",
+        size: "Grande + 12 petites",
+        price: 110,
+        description: "1 grande assiette + 12 petites assiettes",
+        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb2fea3dac3ba45baae6ddcb69815359c?format=webp&width=400"
+      },
+      {
         id: "rectangulaire",
         size: "Assiette rectangulaire",
         price: 45,
