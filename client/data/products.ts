@@ -282,7 +282,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Assiettes",
-    basePrice: 8,
+    basePrice: 13,
     category: "Art de la table",
     image: "https://images.unsplash.com/photo-1578749760903-03b75f5edffc?w=400&h=400&fit=crop",
     description: "Collection d'assiettes traditionnelles en terre cuite",
