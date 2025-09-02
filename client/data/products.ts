@@ -297,7 +297,7 @@ export const products: Product[] = [
       {
         id: "service_complet",
         size: "Grande + 6 petites",
-        price: 60,
+        price: 70,
         description: "1 grande assiette + 6 petites assiettes",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb2fea3dac3ba45baae6ddcb69815359c?format=webp&width=400"
       },
