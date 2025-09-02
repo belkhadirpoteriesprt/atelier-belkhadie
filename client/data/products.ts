@@ -345,7 +345,7 @@ export const products: Product[] = [
       {
         id: "soupiere_6bols_8cm",
         size: "Soupière + 6 bols 8cm",
-        price: 70,
+        price: 80,
         description: "Service complet avec bols 8cm",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
