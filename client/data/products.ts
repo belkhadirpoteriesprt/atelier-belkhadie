@@ -311,7 +311,7 @@ export const products: Product[] = [
       {
         id: "rectangulaire",
         size: "Assiette rectangulaire",
-        price: 45,
+        price: 55,
         description: "Format rectangulaire pour présentation",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F7984cf5bc73c4bb083c034e5308b4c20?format=webp&width=400"
       },
