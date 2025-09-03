@@ -379,7 +379,7 @@ export const products: Product[] = [
       {
         id: "gourde_seule",
         size: "Gourde seule",
-        price: 50,
+        price: 60,
         description: "Gourde traditionnelle uniquement",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F1a41d7d58f6445a0b2b55caf52dcdafb?format=webp&width=400"
       },
