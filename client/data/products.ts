@@ -413,7 +413,7 @@ export const products: Product[] = [
       {
         id: "khmissa",
         size: "Khmissa",
-        price: 70,
+        price: 80,
         description: "Modèle Khmissa traditionnel",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fcf6080c012884a91a9aac8792a852131?format=webp&width=400"
       },
