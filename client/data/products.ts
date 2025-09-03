@@ -148,7 +148,7 @@ export const patterns: Pattern[] = [
     primaryColor: "#1F2937",
     thumbnail:
       "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F986b72e4b4f24af29f91a03fec9600c2?format=webp&width=100",
-    description: "Noir él��gant avec motifs blancs",
+    description: "Noir élégant avec motifs blancs",
   },
   {
     id: "multicolore",
@@ -441,7 +441,7 @@ export const products: Product[] = [
       {
         id: "traditionnelle",
         size: "Traditionnelle",
-        price: 60,
+        price: 70,
         description: "Modèle traditionnel classique",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F6cee35b1b28f4f96a3f3db53b74303e8?format=webp&width=400"
       },
