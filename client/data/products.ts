@@ -427,7 +427,7 @@ export const products: Product[] = [
       {
         id: "bolbol",
         size: "Bolbol",
-        price: 70,
+        price: 80,
         description: "Modèle Bolbol traditionnel",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F4117228912fc453dab64b03b091cf061?format=webp&width=400"
       },
