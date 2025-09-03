@@ -111,7 +111,7 @@ export default function Help() {
                   Notre atelier à Safi
                 </h3>
                 <p className="text-green-800 font-medium">
-                  📍 62, village des potiers, Safi, Maroc
+                  📍 67, village des potiers, Safi, Maroc
                 </p>
                 <p className="text-sm text-green-700 mt-2">
                   Venez découvrir notre atelier traditionnel !
