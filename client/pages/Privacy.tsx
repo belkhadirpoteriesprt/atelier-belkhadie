@@ -218,7 +218,7 @@ export default function Privacy() {
                   <div className="mt-4">
                     <strong>📍 Adresse :</strong><br />
                     Belkhadir Poterie<br />
-                    62, village des potiers<br />
+                    67, village des potiers<br />
                     Safi, Maroc
                   </div>
                 </div>
