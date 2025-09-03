@@ -364,7 +364,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Gourde et Verres",
-    basePrice: 15,
+    basePrice: 25,
     category: "Art de la table",
     image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F3eecfc4b088a4045886529b23b62a3fb?format=webp&width=800",
     description: "Service à boire traditionnel en terre cuite",
