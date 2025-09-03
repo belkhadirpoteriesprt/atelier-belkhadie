@@ -262,7 +262,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Tajine",
-    basePrice: 20,
+    basePrice: 15,
     category: "Art de la table",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fa927d76d2a344e26a0e874259409829b?format=webp&width=400",
     description: "Tajine traditionnel marocain",
@@ -270,7 +270,7 @@ export const products: Product[] = [
       {
         id: "12cm",
         size: "12 cm",
-        price: 20,
+        price: 15,
         description: "Tajine individuel",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fa927d76d2a344e26a0e874259409829b?format=webp&width=400"
       },
@@ -323,7 +323,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Soupière et Bols",
-    basePrice: 18,
+    basePrice: 10,
     category: "Art de la table",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400",
     description: "Service de soupe traditionnel et bols individuels",
@@ -331,14 +331,14 @@ export const products: Product[] = [
       {
         id: "bol_8cm",
         size: "Bol 8cm",
-        price: 18,
+        price: 10,
         description: "Bol petit format",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
       {
         id: "bol_12cm",
         size: "Bol 12cm",
-        price: 20,
+        price: 15,
         description: "Bol grand format",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
