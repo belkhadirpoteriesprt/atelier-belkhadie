@@ -118,7 +118,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
 
 📅 Demande envoyée le ${new Date().toLocaleString("fr-FR")}`;
 
-    const whatsappUrl = `https://wa.me/212675202336?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/212661724956?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -215,13 +215,13 @@ ${customForm.freeText || "Aucune demande spéciale"}
 
                   {/* Bouton WhatsApp Standard */}
                   <a
-                    href="https://wa.me/212675202336"
+                    href="https://wa.me/212661724956"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold shadow-lg"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp: +212 675-202336
+                    WhatsApp: +212 661-724956
                   </a>
                 </div>
               </div>
