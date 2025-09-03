@@ -420,7 +420,7 @@ export const products: Product[] = [
       {
         id: "plateau_tajines",
         size: "Plateau + 4 tajines",
-        price: 60,
+        price: 70,
         description: "Feraqa avec plateau et 4 petits tajines",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fce840e4abbea4934b926a6590d7f9ef4?format=webp&width=400"
       },
