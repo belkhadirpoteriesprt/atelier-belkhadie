@@ -266,7 +266,7 @@ export default function Terms() {
 
                 <div className="bg-white/10 rounded-lg p-4">
                   <h3 className="font-semibold mb-2">📍 Visite d'atelier :</h3>
-                  <p>62, village des potiers, Safi, Maroc</p>
+                  <p>67, village des potiers, Safi, Maroc</p>
                   <p>Ouvert du lundi au samedi, de 8h à 18h</p>
                 </div>
 
