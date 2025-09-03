@@ -372,7 +372,7 @@ export const products: Product[] = [
       {
         id: "verre_assiette",
         size: "Verre + Assiette",
-        price: 15,
+        price: 25,
         description: "Verre avec assiette assortie",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F5d0532bd8dd84b259a455c07d215e98a?format=webp&width=400"
       },
