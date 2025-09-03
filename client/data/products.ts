@@ -448,7 +448,7 @@ export const products: Product[] = [
       {
         id: "floral",
         size: "Floral",
-        price: 65,
+        price: 75,
         description: "Modèle floral délicat",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F888b62b68ea2490d9e6da722781123e5?format=webp&width=400"
       },
