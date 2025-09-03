@@ -116,7 +116,7 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2 text-amber-200">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>62, village des potiers, Safi, Maroc</span>
+                <span>67, village des potiers, Safi, Maroc</span>
               </div>
               <p className="text-amber-200 leading-relaxed">
                 Chaque pièce est façonnée à la main avec passion et savoir-faire
