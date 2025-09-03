@@ -355,7 +355,7 @@ export default function About() {
               <div className="flex items-center justify-center mb-4">
                 <MapPin className="w-6 h-6 text-amber-400 mr-2" />
                 <span className="text-xl font-semibold">
-                  62, village des potiers, Safi, Maroc
+                  67, village des potiers, Safi, Maroc
                 </span>
               </div>
               <p className="text-amber-200 mb-6">
