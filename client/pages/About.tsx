@@ -163,7 +163,7 @@ export default function About() {
                     Notre Atelier à Safi
                   </h3>
                   <p className="text-gray-700">
-                    62, village des potiers - Au cœur de la tradition
+                    67, village des potiers - Au cœur de la tradition
                   </p>
                 </div>
               </div>
