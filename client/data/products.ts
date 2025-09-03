@@ -356,6 +356,13 @@ export const products: Product[] = [
         description: "Service complet avec bols 12cm",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
+      {
+        id: "soupiere_12bols",
+        size: "Soupière + 12 bols",
+        price: 120,
+        description: "Service complet 12 bols",
+        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
+      },
     ],
     availablePatterns: commonPatterns,
   },
