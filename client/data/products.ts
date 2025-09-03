@@ -405,7 +405,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Feraqa",
-    basePrice: 60,
+    basePrice: 70,
     category: "Symboles traditionnels",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F16dbb9f6c9c049eba5f30b68e15fa66d?format=webp&width=400",
     description: "Collection de Feraqa - Symboles traditionnels de protection",
