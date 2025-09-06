@@ -129,7 +129,7 @@ export function Footer() {
         <div className="border-t border-amber-700 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-amber-200 text-sm">
-              © 2024 Belkhadir Poterie - Artisanat Marocain Authentique par
+              © {new Date().getFullYear()} Belkhadir Poterie - Artisanat Marocain Authentique par
               Idriss Belkhadir
             </p>
             <div className="flex space-x-6 text-sm">
