@@ -230,6 +230,40 @@ ${customForm.freeText || "Aucune demande spéciale"}
         </div>
       </div>
 
+      {/* Nos offres pour vous */}
+      <section className="py-16 bg-amber-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-8">Nos offres pour vous</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="/product/7" className="group rounded-2xl overflow-hidden border border-amber-200 shadow-lg bg-white">
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F115469c9c50c4542ae7eb015d98da681?format=webp&width=800"
+                  alt="Pack Ramadan - Table Safiote"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-2xl font-bold text-amber-900">Pack Ramadan — 589 MAD</h3>
+                <p className="text-amber-800 mt-2">Soupière, 12 bols, assiette principale, 12 petites assiettes, 2 gourdes + 12 verres, Feraqa Khmissa</p>
+                <span className="inline-block mt-4 bg-amber-600 text-white px-4 py-2 rounded-lg">Voir le pack</span>
+              </div>
+            </a>
+            <div className="grid gap-6">
+              <div className="rounded-xl border border-amber-200 p-5 bg-white">
+                <h4 className="text-xl font-semibold text-amber-900">Basique</h4>
+                <p className="text-amber-800">Soupière, 6 bols, grande assiette + 6 petites assiettes</p>
+                <a href="/product/7" className="inline-block mt-3 text-amber-700 font-semibold hover:underline">Voir</a>
+              </div>
+              <div className="rounded-xl border border-gray-200 p-5 bg-gray-50 opacity-70">
+                <h4 className="text-xl font-semibold text-gray-700">Pack spécial — Bientôt disponible</h4>
+                <p className="text-gray-600">Revenez bientôt pour le découvrir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Formulaire de Personnalisation (Modal) */}
       <AnimatePresence>
         {showCustomForm && (
@@ -292,7 +326,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
                 {/* Sélection des Couleurs */}
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-amber-900 mb-4 flex items-center">
-                    🎨 Couleurs préférées
+                    🎨 Couleurs préfér��es
                   </h3>
                   <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
                     {availableColors.map((color) => (
