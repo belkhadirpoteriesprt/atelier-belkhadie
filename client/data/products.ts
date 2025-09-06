@@ -445,8 +445,15 @@ export const products: Product[] = [
     description: "Formule complète pour table familiale traditionnelle de Safi — il contient: khmissa, bolbol, soupiere+6bols, gourde+6verres, assiettes a œufs, assiette rectangulaire, assiette principal + 6 petites",
     sizeVariants: [
       {
-        id: "formule_complete",
-        size: "Formule complète",
+        id: "pack_ramadan",
+        size: "Pack Ramadan",
+        price: 589,
+        description: "Soupière, 12 bols, assiette principale, 12 petites assiettes, 2 gourdes + 12 verres, Feraqa Khmissa",
+        image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F115469c9c50c4542ae7eb015d98da681?format=webp&width=800"
+      },
+      {
+        id: "basique",
+        size: "Basique",
         price: 450,
         description: "1 soupière + 12 bols 8cm, 2 grandes assiettes + 24 petites, 2 assiettes rectangulaires, 3 feraqa au choix",
         image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800"
