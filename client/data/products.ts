@@ -329,24 +329,10 @@ export const products: Product[] = [
     description: "Service de soupe traditionnel et bols individuels",
     sizeVariants: [
       {
-        id: "bol_8cm",
-        size: "Bol 8cm",
-        price: 10,
-        description: "Bol petit format",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
-      },
-      {
         id: "bol_12cm",
         size: "Bol 12cm",
         price: 15,
         description: "Bol grand format",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
-      },
-      {
-        id: "soupiere_6bols_8cm",
-        size: "Soupière + 6 bols 8cm",
-        price: 80,
-        description: "Service complet avec bols 8cm",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
       {
@@ -376,13 +362,6 @@ export const products: Product[] = [
     image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F3eecfc4b088a4045886529b23b62a3fb?format=webp&width=800",
     description: "Service à boire traditionnel en terre cuite",
     sizeVariants: [
-      {
-        id: "verre_assiette",
-        size: "Verre + Assiette",
-        price: 25,
-        description: "Verre avec assiette assortie",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F5d0532bd8dd84b259a455c07d215e98a?format=webp&width=400"
-      },
       {
         id: "gourde_seule",
         size: "Gourde seule",
@@ -437,13 +416,6 @@ export const products: Product[] = [
         price: 85,
         description: "Modèle carré géométrique",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F7b7636748fbe45379816dd330558bd96?format=webp&width=400"
-      },
-      {
-        id: "traditionnelle",
-        size: "Traditionnelle",
-        price: 70,
-        description: "Modèle traditionnel classique",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F6cee35b1b28f4f96a3f3db53b74303e8?format=webp&width=400"
       },
       {
         id: "floral",
