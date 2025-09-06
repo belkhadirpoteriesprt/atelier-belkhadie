@@ -384,7 +384,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Feraqa",
-    basePrice: 70,
+    basePrice: 60,
     category: "Symboles traditionnels",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F16dbb9f6c9c049eba5f30b68e15fa66d?format=webp&width=400",
     description: "Collection de Feraqa - Symboles traditionnels de protection",
@@ -392,35 +392,35 @@ export const products: Product[] = [
       {
         id: "khmissa",
         size: "Khmissa",
-        price: 80,
+        price: 70,
         description: "Modèle Khmissa traditionnel",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fcf6080c012884a91a9aac8792a852131?format=webp&width=400"
       },
       {
         id: "plateau_tajines",
         size: "Plateau + 4 tajines",
-        price: 70,
+        price: 60,
         description: "Feraqa avec plateau et 4 petits tajines",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fce840e4abbea4934b926a6590d7f9ef4?format=webp&width=400"
       },
       {
         id: "bolbol",
         size: "Bolbol",
-        price: 80,
+        price: 70,
         description: "Modèle Bolbol traditionnel",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F4117228912fc453dab64b03b091cf061?format=webp&width=400"
       },
       {
         id: "carre",
         size: "Carré",
-        price: 85,
+        price: 75,
         description: "Modèle carré géométrique",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F7b7636748fbe45379816dd330558bd96?format=webp&width=400"
       },
       {
         id: "floral",
         size: "Floral",
-        price: 75,
+        price: 65,
         description: "Modèle floral délicat",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F888b62b68ea2490d9e6da722781123e5?format=webp&width=400"
       },
