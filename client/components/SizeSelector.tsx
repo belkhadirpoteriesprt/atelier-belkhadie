@@ -1,12 +1,12 @@
 import { SizeVariant } from "../data/products";
 import { Ruler, ChevronRight } from "lucide-react";
-import { getVariantImage } from "../data/products";
 
 interface SizeSelectorProps {
   sizeVariants: SizeVariant[];
   selectedSizeId: string;
   onSizeChange: (sizeId: string) => void;
   productName: string;
+  productImage: string;
 }
 
 export function SizeSelector({
@@ -14,6 +14,7 @@ export function SizeSelector({
   selectedSizeId,
   onSizeChange,
   productName,
+  productImage,
 }: SizeSelectorProps) {
   const [expanded, setExpanded] = useState(false);
   const selectedVariant = sizeVariants.find((v) => v.id === selectedSizeId);
@@ -40,7 +41,7 @@ export function SizeSelector({
             title={`${variant.size}${variant.dimensions ? ` (${variant.dimensions})` : ""}`}
           >
             <img
-              src={getVariantImage({ id: 0, name: "", basePrice: 0, image: "", description: "", category: "", sizeVariants: [variant], availablePatterns: [], images: {} } as unknown as Product, variant.id)}
+              src={variant.image || productImage}
               alt={variant.size}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -78,7 +79,7 @@ export function SizeSelector({
             >
               <div className="aspect-square overflow-hidden">
                 <img
-                  src={getVariantImage({ id: 0, name: "", basePrice: 0, image: "", description: "", category: "", sizeVariants: [variant], availablePatterns: [], images: {} } as unknown as Product, variant.id)}
+                  src={variant.image || productImage}
                   alt={variant.size}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
