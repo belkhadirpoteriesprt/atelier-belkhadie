@@ -19,7 +19,6 @@ export function SizeSelector({
   productImage,
 }: SizeSelectorProps) {
   const [expanded, setExpanded] = useState(false);
-  const selectedVariant = sizeVariants.find((v) => v.id === selectedSizeId);
 
   return (
     <div className="space-y-4">
@@ -101,30 +100,6 @@ export function SizeSelector({
               )}
             </button>
           ))}
-        </div>
-      )}
-
-      {/* Récapitulatif de la sélection */}
-      {selectedVariant && (
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-4 border border-green-200">
-          <h4 className="font-semibold text-green-900 mb-2">✅ Votre sélection</h4>
-          <div className="text-sm text-green-800">
-            <p>
-              <strong>Produit :</strong> {productName}
-            </p>
-            <p>
-              <strong>Taille :</strong> {selectedVariant.size}
-              {selectedVariant.dimensions && ` (${selectedVariant.dimensions})`}
-            </p>
-            {selectedVariant.description && (
-              <p>
-                <strong>Description :</strong> {selectedVariant.description}
-              </p>
-            )}
-            <p className="text-lg font-bold text-green-900 mt-2">
-              Prix : {selectedVariant.price.toFixed(2)} MAD
-            </p>
-          </div>
         </div>
       )}
 
