@@ -25,7 +25,7 @@ export function ColorPatternCustomizer({
   const colorPatterns = availablePatternObjects.filter(
     (p) => !["parentheses", "geometrique", "motif_traditionnel"].includes(p.id),
   );
-  const specialMotifs = availablePatternObjects.filter((p) =>
+  const specialMotifs = patterns.filter((p) =>
     ["parentheses", "geometrique", "motif_traditionnel"].includes(p.id),
   );
 
