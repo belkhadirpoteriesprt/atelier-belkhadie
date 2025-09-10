@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ShoppingCart, Plus, Minus } from "lucide-react";
 import { Layout } from "../components/Layout";
@@ -23,6 +24,9 @@ export default function ProductDetail() {
   const [selectedPatternId, setSelectedPatternId] = useState("");
   const [isAdding, setIsAdding] = useState(false);
 
+  const imageRef = useRef<HTMLDivElement | null>(null);
+  const prevSizeRef = useRef<string>("");
+
   const product = products.find((p) => p.id === parseInt(id!));
 
   // Initialiser la sélection par défaut avec useEffect
@@ -37,6 +41,18 @@ export default function ProductDetail() {
       }
     }
   }, [product, selectedSizeId, selectedPatternId]);
+
+  // Remonter vers l'aperçu de l'image quand le modèle/pack change
+  useEffect(() => {
+    if (!prevSizeRef.current) {
+      prevSizeRef.current = selectedSizeId;
+      return;
+    }
+    if (selectedSizeId && prevSizeRef.current !== selectedSizeId) {
+      prevSizeRef.current = selectedSizeId;
+      imageRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [selectedSizeId]);
 
   if (!product) {
     return (
@@ -122,7 +138,7 @@ export default function ProductDetail() {
               animate={{ opacity: 1, scale: 1 }}
               className="space-y-6"
             >
-              <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl bg-gray-50">
+              <div ref={imageRef} className="aspect-square overflow-hidden rounded-2xl shadow-2xl bg-gray-50">
                 <img
                   src={getVariantImage(product, selectedSizeId)}
                   alt={productName}
@@ -166,6 +182,7 @@ export default function ProductDetail() {
                   selectedSizeId={selectedSizeId}
                   onSizeChange={setSelectedSizeId}
                   productName={product.name}
+                  productImage={product.image}
                 />
               )}
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { patterns, getPatternById } from "../data/products";
 
 interface ColorPatternCustomizerProps {

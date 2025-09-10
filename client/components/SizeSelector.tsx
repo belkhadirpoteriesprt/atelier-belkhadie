@@ -1,4 +1,5 @@
 import { SizeVariant } from "../data/products";
+import { useState } from "react";
 import { Ruler, ChevronRight } from "lucide-react";
 
 interface SizeSelectorProps {
