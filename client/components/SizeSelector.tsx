@@ -1,4 +1,4 @@
-import { SizeVariant } from "../data/products";
+import type { SizeVariant } from "../data/products";
 import { useState } from "react";
 import { Ruler, ChevronRight } from "lucide-react";
 import type { SizeVariant } from "../data/products";
