@@ -166,7 +166,7 @@ export function ColorPatternCustomizer({
         <div className="mt-6 bg-amber-50 rounded-lg p-4 border border-amber-200">
           <p className="text-amber-800 text-sm leading-relaxed">
             <strong>📝 Note :</strong> Ces sélections seront transmises à l'artisan lors de la finalisation de votre commande.
-            Chaque pièce sera personnalisée selon vos préférences de couleurs et motifs.
+            Chaque pièce sera personnalisée selon vos préférences de couleurs et motifs. Le site est encore en développement pour améliorer l’expérience utilisateur.
           </p>
         </div>
       </div>
