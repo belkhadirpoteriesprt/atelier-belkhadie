@@ -261,28 +261,6 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                   );
                 })}
               </div>
-              <div className="mt-4 pt-4 border-t border-gray-200 space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-gray-900">Sous-total produits</span>
-                  <span className="text-xl font-bold text-amber-700">{total.toFixed(2)} MAD</span>
-                </div>
-                <div className="flex justify-between text-sm text-gray-700">
-                  <span>Frais d'emballage</span>
-                  <span>{packagingFees[packaging].toFixed(2)} MAD</span>
-                </div>
-                <div className="flex justify-between text-sm text-gray-700">
-                  <span>Frais de livraison</span>
-                  <span>{deliveryFees[delivery].toFixed(2)} MAD</span>
-                </div>
-                <div className="flex justify-between text-sm text-gray-700">
-                  <span>Frais de paiement</span>
-                  <span>{paymentFees[paymentMode].toFixed(2)} MAD</span>
-                </div>
-                <div className="flex justify-between items-center pt-2 border-t border-gray-200">
-                  <span className="text-lg font-semibold text-gray-900">Total estimé</span>
-                  <span className="text-2xl font-bold text-amber-700">{grandTotal.toFixed(2)} MAD</span>
-                </div>
-              </div>
             </div>
 
             {/* Customer Information Form */}
@@ -479,6 +457,30 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                 <p className="text-sm text-amber-800">
                   <strong>🎨 Variantes Personnalisées:</strong> Chaque pièce sera fabriquée selon vos spécifications exactes (taille et motif). <strong>📍 Livraison:</strong> Uniquement au Maroc. Paiement intégral requis. Nous vous contacterons rapidement.
                 </p>
+              </div>
+
+              {/* Totaux (fin du formulaire) */}
+              <div className="mt-2 pt-4 border-t border-gray-200 space-y-2">
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-semibold text-gray-900">Sous-total produits</span>
+                  <span className="text-xl font-bold text-amber-700">{total.toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between text-sm text-gray-700">
+                  <span>Frais d'emballage</span>
+                  <span>{packagingFees[packaging].toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between text-sm text-gray-700">
+                  <span>Frais de livraison</span>
+                  <span>{deliveryFees[delivery].toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between text-sm text-gray-700">
+                  <span>Frais de paiement</span>
+                  <span>{paymentFees[paymentMode].toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between items-center pt-2 border-t border-gray-200">
+                  <span className="text-lg font-semibold text-gray-900">Total estimé</span>
+                  <span className="text-2xl font-bold text-amber-700">{grandTotal.toFixed(2)} MAD</span>
+                </div>
               </div>
 
               <button
