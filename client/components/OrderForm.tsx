@@ -561,6 +561,10 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                   <span>Frais de livraison</span>
                   <span className="font-medium">{deliveryFees[delivery].toFixed(2)} MAD</span>
                 </div>
+                <div className="flex justify-between">
+                  <span>Frais de paiement</span>
+                  <span className="font-medium">{paymentFees[paymentMode].toFixed(2)} MAD</span>
+                </div>
                 <div className="border-t pt-2 flex justify-between font-bold">
                   <span>Total estimé</span>
                   <span>{grandTotal.toFixed(2)} MAD</span>
