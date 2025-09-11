@@ -441,6 +441,40 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                 </div>
               </div>
 
+              {/* Mode de paiement */}
+              <div className="border border-gray-200 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-900 mb-2">Mode de paiement</h4>
+                <div className="space-y-2">
+                  <label className="flex items-start justify-between p-2 rounded-lg border cursor-pointer">
+                    <div className="flex items-center space-x-2">
+                      <input type="radio" name="payment" value="livraison" checked={paymentMode === "livraison"} onChange={() => setPaymentMode("livraison")} disabled={isSubmitting} />
+                      <span>Paiement à la livraison</span>
+                    </div>
+                    <span className="text-sm text-gray-600">0 MAD</span>
+                  </label>
+                  <label className="flex items-start justify-between p-2 rounded-lg border cursor-not-allowed opacity-60">
+                    <div className="flex flex-col">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="payment" value="en_ligne" checked={paymentMode === "en_ligne"} onChange={() => setPaymentMode("en_ligne")} disabled />
+                        <span>Paiement en ligne</span>
+                      </div>
+                      <span className="text-xs text-gray-600 mt-1">Indisponible pour l’instant (en cours de développement de notre système de sécurité).</span>
+                    </div>
+                    <span className="text-sm text-gray-600">0 MAD</span>
+                  </label>
+                  <label className="flex items-start justify-between p-2 rounded-lg border cursor-pointer">
+                    <div className="flex flex-col">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="payment" value="virement" checked={paymentMode === "virement"} onChange={() => setPaymentMode("virement")} disabled={isSubmitting} />
+                        <span>Paiement aux agences ou applications par virement (Cash Plus, TapTap Send...)</span>
+                      </div>
+                      <span className="text-xs text-gray-600 mt-1">+5 MAD, nous vous contacterons pour plus d’informations.</span>
+                    </div>
+                    <span className="text-sm text-gray-600">5 MAD</span>
+                  </label>
+                </div>
+              </div>
+
               <div className="bg-amber-50 p-4 rounded-lg">
                 <p className="text-sm text-amber-800">
                   <strong>🎨 Variantes Personnalisées:</strong> Chaque pièce sera fabriquée selon vos spécifications exactes (taille et motif). <strong>📍 Livraison:</strong> Uniquement au Maroc. Paiement intégral requis. Nous vous contacterons rapidement.
