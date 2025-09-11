@@ -108,6 +108,7 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
           productsSubtotal: total,
           packaging: { option: packaging, fee: packagingFees[packaging] },
           delivery: { option: delivery, fee: deliveryFees[delivery] },
+          payment: { mode: paymentMode, fee: paymentFees[paymentMode] },
           extrasTotal,
           grandTotal,
         },
