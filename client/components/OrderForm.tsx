@@ -36,6 +36,7 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
   // Frais supplémentaires
   const [packaging, setPackaging] = useState<"none" | "normal" | "special">("none");
   const [delivery, setDelivery] = useState<"none" | "relais" | "domicile" | "programme">("none");
+  const [paymentMode, setPaymentMode] = useState<"livraison" | "en_ligne" | "virement">("livraison");
 
   const packagingFees: Record<"none" | "normal" | "special", number> = {
     none: 0,
@@ -50,7 +51,13 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
     programme: 30,
   };
 
-  const extrasTotal = packagingFees[packaging] + deliveryFees[delivery];
+  const paymentFees: Record<"livraison" | "en_ligne" | "virement", number> = {
+    livraison: 0,
+    en_ligne: 0,
+    virement: 5,
+  };
+
+  const extrasTotal = packagingFees[packaging] + deliveryFees[delivery] + paymentFees[paymentMode];
   const grandTotal = total + extrasTotal;
 
   const handleChange = (
