@@ -33,6 +33,26 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
+  // Frais supplémentaires
+  const [packaging, setPackaging] = useState<"none" | "normal" | "special">("none");
+  const [delivery, setDelivery] = useState<"none" | "relais" | "domicile" | "programme">("none");
+
+  const packagingFees: Record<"none" | "normal" | "special", number> = {
+    none: 0,
+    normal: 5,
+    special: 15,
+  };
+
+  const deliveryFees: Record<"none" | "relais" | "domicile" | "programme", number> = {
+    none: 0,
+    relais: 20,
+    domicile: 35,
+    programme: 30,
+  };
+
+  const extrasTotal = packagingFees[packaging] + deliveryFees[delivery];
+  const grandTotal = total + extrasTotal;
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -77,7 +97,13 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
             total: item.variantPrice * item.quantity,
           };
         }),
-        orderTotal: total,
+        totals: {
+          productsSubtotal: total,
+          packaging: { option: packaging, fee: packagingFees[packaging] },
+          delivery: { option: delivery, fee: deliveryFees[delivery] },
+          extrasTotal,
+          grandTotal,
+        },
         customer: formData,
       };
 
@@ -227,14 +253,22 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                   );
                 })}
               </div>
-              <div className="mt-4 pt-4 border-t border-gray-200">
+              <div className="mt-4 pt-4 border-t border-gray-200 space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-gray-900">
-                    Total (hors frais de livraison)
-                  </span>
-                  <span className="text-xl font-bold text-amber-700">
-                    {total.toFixed(2)} MAD
-                  </span>
+                  <span className="text-lg font-semibold text-gray-900">Sous-total produits</span>
+                  <span className="text-xl font-bold text-amber-700">{total.toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between text-sm text-gray-700">
+                  <span>Frais d'emballage</span>
+                  <span>{packagingFees[packaging].toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between text-sm text-gray-700">
+                  <span>Frais de livraison</span>
+                  <span>{deliveryFees[delivery].toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between items-center pt-2 border-t border-gray-200">
+                  <span className="text-lg font-semibold text-gray-900">Total estimé</span>
+                  <span className="text-2xl font-bold text-amber-700">{grandTotal.toFixed(2)} MAD</span>
                 </div>
               </div>
             </div>
@@ -336,12 +370,68 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                 />
               </div>
 
+              {/* Frais supplémentaires */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Emballage */}
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Frais d’emballage</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center justify-between p-2 rounded-lg border cursor-pointer">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="packaging" value="none" checked={packaging === "none"} onChange={() => setPackaging("none")} disabled={isSubmitting} />
+                        <span>Sans emballage</span>
+                      </div>
+                      <span className="text-sm text-gray-600">0 MAD</span>
+                    </label>
+                    <label className="flex items-center justify-between p-2 rounded-lg border cursor-pointer">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="packaging" value="normal" checked={packaging === "normal"} onChange={() => setPackaging("normal")} disabled={isSubmitting} />
+                        <span>Emballage normal</span>
+                      </div>
+                      <span className="text-sm text-gray-600">5 MAD</span>
+                    </label>
+                    <label className="flex items-center justify-between p-2 rounded-lg border cursor-pointer">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="packaging" value="special" checked={packaging === "special"} onChange={() => setPackaging("special")} disabled={isSubmitting} />
+                        <span>Emballage spécial (papier cadeau, ruban, déco)</span>
+                      </div>
+                      <span className="text-sm text-gray-600">15 MAD</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Livraison */}
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Frais de livraison</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center justify-between p-2 rounded-lg border cursor-pointer">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="delivery" value="relais" checked={delivery === "relais"} onChange={() => setDelivery("relais")} disabled={isSubmitting} />
+                        <span>Point de relais</span>
+                      </div>
+                      <span className="text-sm text-gray-600">20 MAD</span>
+                    </label>
+                    <label className="flex items-center justify-between p-2 rounded-lg border cursor-pointer">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="delivery" value="domicile" checked={delivery === "domicile"} onChange={() => setDelivery("domicile")} disabled={isSubmitting} />
+                        <span>À domicile</span>
+                      </div>
+                      <span className="text-sm text-gray-600">35 MAD</span>
+                    </label>
+                    <label className="flex items-center justify-between p-2 rounded-lg border cursor-pointer">
+                      <div className="flex items-center space-x-2">
+                        <input type="radio" name="delivery" value="programme" checked={delivery === "programme"} onChange={() => setDelivery("programme")} disabled={isSubmitting} />
+                        <span>Programmé</span>
+                      </div>
+                      <span className="text-sm text-gray-600">30 MAD</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-amber-50 p-4 rounded-lg">
                 <p className="text-sm text-amber-800">
-                  <strong>🎨 Variantes Personnalisées:</strong> Chaque pièce
-                  sera fabriquée selon vos spécifications exactes (taille et
-                  motif). <strong>📍 Livraison:</strong> Uniquement au Maroc.
-                  Paiement intégral requis. Nous vous contacterons rapidement.
+                  <strong>🎨 Variantes Personnalisées:</strong> Chaque pièce sera fabriquée selon vos spécifications exactes (taille et motif). <strong>📍 Livraison:</strong> Uniquement au Maroc. Paiement intégral requis. Nous vous contacterons rapidement.
                 </p>
               </div>
 
@@ -356,7 +446,7 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                     Envoi en cours...
                   </>
                 ) : (
-                  `🎨 Confirmer la Commande Personnalisée (${total.toFixed(2)} MAD)`
+                  `🎨 Confirmer la Commande Personnalisée (${grandTotal.toFixed(2)} MAD)`
                 )}
               </button>
             </form>
@@ -413,9 +503,21 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                     </div>
                   );
                 })}
+                <div className="border-t pt-2 flex justify-between">
+                  <span>Sous-total produits</span>
+                  <span className="font-medium">{total.toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Frais d'emballage</span>
+                  <span className="font-medium">{packagingFees[packaging].toFixed(2)} MAD</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Frais de livraison</span>
+                  <span className="font-medium">{deliveryFees[delivery].toFixed(2)} MAD</span>
+                </div>
                 <div className="border-t pt-2 flex justify-between font-bold">
-                  <span>Montant total (hors frais de livraison)</span>
-                  <span>{total.toFixed(2)} MAD</span>
+                  <span>Total estimé</span>
+                  <span>{grandTotal.toFixed(2)} MAD</span>
                 </div>
               </div>
             </div>
