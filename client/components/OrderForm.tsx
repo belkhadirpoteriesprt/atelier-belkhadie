@@ -524,6 +524,9 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 🎨 Commande Personnalisée Confirmée !
               </h3>
+              {orderCode && (
+                <p className="text-sm text-gray-700 mb-1">Code commande: <span className="font-semibold">{orderCode}</span></p>
+              )}
               <p className="text-gray-600">
                 Merci pour votre confiance. Votre commande avec variantes
                 personnalisées a été enregistrée avec succès.
