@@ -32,6 +32,7 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [orderCode, setOrderCode] = useState<string | null>(null);
 
   // Frais supplémentaires
   const [packaging, setPackaging] = useState<"none" | "normal" | "special">("none");
