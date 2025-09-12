@@ -31,8 +31,16 @@ export async function sendVendorNotification(message: string) {
 
 export class WhatsAppService {
   async sendOrderNotification(order: {
-    orderId: string;
-    orderTotal: number;
+    orderId: string; // same as code
+    code?: string;
+    totals?: {
+      productsSubtotal: number;
+      packaging?: { option: string; fee: number };
+      delivery?: { option: string; fee: number };
+      payment?: { mode: string; fee: number };
+      extrasTotal?: number;
+      grandTotal?: number;
+    };
     customer: { name: string; surname: string; phone: string; email: string; address: string };
     items: Array<{
       product: { name: string; price: number; baseProduct: string; category: string };
@@ -41,7 +49,8 @@ export class WhatsAppService {
       variantDetails: { sizeVariantId: string; sizeName: string; sizeDescription?: string; patternId: string; patternName: string; patternColors: string[] };
     }>;
   }) {
-    const header = `Nouvelle commande ${order.orderId}`;
+    const code = order.code || order.orderId;
+    const header = `Nouvelle commande ${code}`;
     const customer = `Client: ${order.customer.name} ${order.customer.surname}\nEmail: ${order.customer.email}\nTéléphone: ${order.customer.phone}\nAdresse: ${order.customer.address}`;
 
     const lines = order.items.map((item, idx) => {
@@ -50,7 +59,16 @@ export class WhatsAppService {
       return `${idx + 1}. ${item.product.name} x${item.quantity} — ${item.total.toFixed(2)} MAD\n   Taille: ${vd.sizeName}${vd.sizeDescription ? ` (${vd.sizeDescription})` : ""}\n   Motif: ${vd.patternName} [${colors}]`;
     });
 
-    const body = `${header}\n\n${customer}\n\nArticles:\n${lines.join("\n")}\n\nTotal: ${order.orderTotal.toFixed(2)} MAD`;
+    const totals = order.totals;
+    const totalsSection = totals
+      ? `\n\nSous-total: ${totals.productsSubtotal.toFixed(2)} MAD` +
+        `\nEmballage: ${(totals.packaging?.fee ?? 0).toFixed(2)} MAD (${totals.packaging?.option ?? "-"})` +
+        `\nLivraison: ${(totals.delivery?.fee ?? 0).toFixed(2)} MAD (${totals.delivery?.option ?? "-"})` +
+        (totals.payment ? `\nPaiement: ${(totals.payment.fee ?? 0).toFixed(2)} MAD (${totals.payment.mode})` : "") +
+        `\nTotal: ${(totals.grandTotal ?? (totals.productsSubtotal + (totals.extrasTotal ?? 0))).toFixed(2)} MAD`
+      : "";
+
+    const body = `${header}\n\n${customer}\n\nArticles:\n${lines.join("\n")}${totalsSection}`;
 
     try {
       await sendVendorNotification(body);
