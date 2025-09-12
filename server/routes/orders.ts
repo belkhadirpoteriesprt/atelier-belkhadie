@@ -33,19 +33,34 @@ const CustomerSchema = z.object({
   address: z.string().min(10, "L'adresse compl��te est requise"),
 });
 
+const TotalsSchema = z.object({
+  productsSubtotal: z.number().min(0),
+  packaging: z.object({ option: z.string(), fee: z.number().min(0) }),
+  delivery: z.object({ option: z.string(), fee: z.number().min(0) }),
+  payment: z.object({ mode: z.string(), fee: z.number().min(0) }).optional(),
+  extrasTotal: z.number().min(0),
+  grandTotal: z.number().min(0),
+});
+
 const OrderSchema = z.object({
   items: z.array(OrderItemSchema).min(1, "Au moins un article est requis"),
-  orderTotal: z.number().min(0),
+  totals: TotalsSchema,
   customer: CustomerSchema,
 });
 
 const whatsAppService = new WhatsAppService();
 
-// Générer un ID de commande unique
-const generateOrderId = (): string => {
-  const timestamp = Date.now().toString(36);
-  const random = Math.random().toString(36).substring(2, 8);
-  return `BPK-${timestamp}-${random}`.toUpperCase();
+// Générateur de code commande mensuel: 0001-MMYY
+const sequenceByPeriod: Record<string, number> = {};
+const generateOrderCode = (): string => {
+  const now = new Date();
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const yy = String(now.getFullYear()).slice(-2);
+  const period = `${mm}${yy}`; // e.g. 0925
+  const next = (sequenceByPeriod[period] ?? 0) + 1;
+  sequenceByPeriod[period] = next;
+  const seq = String(next).padStart(4, "0");
+  return `${seq}-${period}`; // 0001-0925
 };
 
 export const submitOrder: RequestHandler = async (req, res) => {
@@ -64,33 +79,24 @@ export const submitOrder: RequestHandler = async (req, res) => {
       });
     }
 
-    const orderData = validationResult.data;
+    const orderData = validationResult.data as any;
 
-    // Verify total calculation
-    const calculatedTotal = orderData.items.reduce(
-      (sum, item) => sum + item.total,
-      0,
-    );
-
-    if (Math.abs(calculatedTotal - orderData.orderTotal) > 0.01) {
-      console.error("❌ Total mismatch:", {
-        calculated: calculatedTotal,
-        provided: orderData.orderTotal,
-      });
-      return res.status(400).json({
-        success: false,
-        error: "Erreur de calcul du total",
-      });
+    // Vérification basique des totaux
+    const itemsTotal = orderData.items.reduce((sum: number, it: any) => sum + it.total, 0);
+    const recomputedGrand = itemsTotal + (orderData.totals?.extrasTotal ?? 0);
+    if (Math.abs(recomputedGrand - orderData.totals?.grandTotal) > 0.01) {
+      console.warn("⚠️ Grand total discrepancy", { recomputedGrand, provided: orderData.totals?.grandTotal });
     }
 
-    // Gén��rer un ID de commande unique
-    const orderId = generateOrderId();
+    // Générer un code commande lisible (mensuel)
+    const orderCode = generateOrderCode();
 
     // Préparer les données enrichies pour WhatsApp
     const enrichedOrderData = {
       ...orderData,
-      orderId,
-    };
+      orderId: orderCode,
+      code: orderCode,
+    } as any;
 
     // Debug env presence (without secrets)
     console.log("🔐 Twilio env present:", {
@@ -114,8 +120,9 @@ export const submitOrder: RequestHandler = async (req, res) => {
       res.status(200).json({
         success: true,
         message: "Commande reçue avec succès ! Vous serez contacté bientôt.",
-        orderId,
-        whatsAppStatus: whatsAppResult.message
+        orderId: orderCode,
+        code: orderCode,
+        whatsAppStatus: whatsAppResult.message,
       });
     } else {
       console.error("❌ WhatsApp notification failed:", whatsAppResult.error);
