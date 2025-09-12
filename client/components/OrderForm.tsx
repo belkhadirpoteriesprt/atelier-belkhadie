@@ -144,6 +144,7 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
       }
 
       console.log("Order submitted successfully:", result);
+      setOrderCode(result?.code || result?.orderId || null);
       setIsSubmitted(true);
 
       // Clear cart and auto close after 15 seconds
