@@ -376,7 +376,7 @@ export default function About() {
                   <br />
                   Belkhadir.poterie@gmail.com
                   <br />
-                  Belkadi626@gmail.com
+                  belkhadir.poterie@gmail.com
                 </div>
               </div>
             </div>
