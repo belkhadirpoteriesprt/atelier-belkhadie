@@ -93,12 +93,12 @@ export default function Help() {
                     </span>
                   </a>
                   <a
-                    href="mailto:Belkadi626@gmail.com"
+                    href="mailto:belkhadir.poterie@gmail.com"
                     className="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group"
                   >
                     <Mail className="w-4 h-4 mr-3 text-blue-600" />
                     <span className="font-medium group-hover:text-blue-700">
-                      Belkadi626@gmail.com
+                      belkhadir.poterie@gmail.com
                     </span>
                   </a>
                 </div>
