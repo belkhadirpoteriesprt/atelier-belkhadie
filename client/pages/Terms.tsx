@@ -258,9 +258,9 @@ export default function Terms() {
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4">
-                    <h3 className="font-semibold mb-2">�� Par  :</h3>
+                    <h3 className="font-semibold mb-2">📧 Par  :</h3>
                     <p>Belkhadir.poterie@gmail.com</p>
-                    <p>Belkadi626@gmail.com</p>
+                    <p>belkhadir.poterie@gmail.com</p>
                   </div>
                 </div>
 
