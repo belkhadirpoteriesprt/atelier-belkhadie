@@ -52,7 +52,7 @@ export default function Terms() {
                     <li><strong>Dénomination :</strong> Belkhadir Poterie</li>
                     <li><strong>Dirigeant :</strong> Idriss Belkhadir</li>
                     <li><strong>Adresse :</strong> 67, village des potiers, Safi, Maroc</li>
-                    <li><strong>Téléphone :</strong> +212 661 724 956 / +212 675 202 336</li>
+                    <li><strong>Téléphone :</strong> +212 661 724 956 / +212 612 989 463</li>
                     <li><strong>Email :</strong> Belkhadir.poterie@gmail.com</li>
                   </ul>
                 </div>
@@ -253,12 +253,12 @@ export default function Terms() {
                   <div className="bg-white/10 rounded-lg p-4">
                     <h3 className="font-semibold mb-2">📞 Par téléphone :</h3>
                     <p>+212 661 724 956</p>
-                    <p>+212 675 202 336</p>
+                    <p>+212 612 989 463</p>
                     <p>0524 653 072</p>
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4">
-                    <h3 className="font-semibold mb-2">📧 Par  :</h3>
+                    <h3 className="font-semibold mb-2">�� Par  :</h3>
                     <p>Belkhadir.poterie@gmail.com</p>
                     <p>Belkadi626@gmail.com</p>
                   </div>
