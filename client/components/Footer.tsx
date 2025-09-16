@@ -100,10 +100,10 @@ export function Footer() {
                     Belkhadir.poterie@gmail.com
                   </a>
                   <a
-                    href="mailto:Belkadi626@gmail.com"
+                    href="mailto:belkhadir.poterie@gmail.com"
                     className="block hover:text-white transition-colors"
                   >
-                    Belkadi626@gmail.com
+                    belkhadir.poterie@gmail.com
                   </a>
                 </div>
               </div>
