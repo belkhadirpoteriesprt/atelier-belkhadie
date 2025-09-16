@@ -554,8 +554,8 @@ ${customForm.freeText || "Aucune demande spéciale"}
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-700 mb-4">Email</h3>
-              <a href="mailto:belkadi626@gmail.com" className="text-xl font-bold text-gray-600 hover:text-gray-800 transition-colors break-all">
-                belkadi626@gmail.com
+              <a href="mailto:belkhadir.poterie@gmail.com" className="text-xl font-bold text-gray-600 hover:text-gray-800 transition-colors break-all">
+                belkhadir.poterie@gmail.com
               </a>
               <p className="text-gray-500 mt-2">Envoyez-nous un message</p>
             </motion.div>
@@ -610,7 +610,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
                   Appeler Maintenant
                 </a>
                 <a
-                  href="mailto:belkadi626@gmail.com"
+                  href="mailto:belkhadir.poterie@gmail.com"
                   className="flex items-center bg-white text-orange-700 px-8 py-4 rounded-lg hover:bg-amber-50 transition-colors font-semibold shadow-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />
