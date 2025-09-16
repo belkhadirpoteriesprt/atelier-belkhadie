@@ -77,10 +77,10 @@ export function Footer() {
                     +212 661 724 956
                   </a>
                   <a
-                    href="tel:+212675202336"
+                    href="tel:+212612989463"
                     className="block hover:text-white transition-colors"
                   >
-                    +212 675 202 336
+                    +212 612 989 463
                   </a>
                   <a
                     href="tel:0524653072"
