@@ -118,7 +118,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
 
 📅 Demande envoyée le ${new Date().toLocaleString("fr-FR")}`;
 
-    const whatsappUrl = `https://wa.me/212661724956?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/212612989463?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -215,7 +215,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
 
                   {/* Bouton WhatsApp Standard */}
                   <a
-                    href="https://wa.me/212661724956"
+                    href="https://wa.me/212612989463"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold shadow-lg"
@@ -326,7 +326,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
                 {/* Sélection des Couleurs */}
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-amber-900 mb-4 flex items-center">
-                    🎨 Couleurs préfér��es
+                    🎨 Couleurs préférées
                   </h3>
                   <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
                     {availableColors.map((color) => (
@@ -554,8 +554,8 @@ ${customForm.freeText || "Aucune demande spéciale"}
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-700 mb-4">Email</h3>
-              <a href="mailto:belkadi626@gmail.com" className="text-xl font-bold text-gray-600 hover:text-gray-800 transition-colors break-all">
-                belkadi626@gmail.com
+              <a href="mailto:belkhadir.poterie@gmail.com" className="text-xl font-bold text-gray-600 hover:text-gray-800 transition-colors break-all">
+                belkhadir.poterie@gmail.com
               </a>
               <p className="text-gray-500 mt-2">Envoyez-nous un message</p>
             </motion.div>
@@ -610,7 +610,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
                   Appeler Maintenant
                 </a>
                 <a
-                  href="mailto:belkadi626@gmail.com"
+                  href="mailto:belkhadir.poterie@gmail.com"
                   className="flex items-center bg-white text-orange-700 px-8 py-4 rounded-lg hover:bg-amber-50 transition-colors font-semibold shadow-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />

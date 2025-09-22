@@ -57,12 +57,12 @@ export default function Help() {
                     </span>
                   </a>
                   <a
-                    href="tel:+212675202336"
+                    href="tel:+212612989463"
                     className="flex items-center p-3 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors group"
                   >
                     <Phone className="w-4 h-4 mr-3 text-amber-600" />
                     <span className="font-medium group-hover:text-amber-700">
-                      +212 675 202 336
+                      +212 612 989 463
                     </span>
                   </a>
                   <a
@@ -93,12 +93,12 @@ export default function Help() {
                     </span>
                   </a>
                   <a
-                    href="mailto:Belkadi626@gmail.com"
+                    href="mailto:belkhadir.poterie@gmail.com"
                     className="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group"
                   >
                     <Mail className="w-4 h-4 mr-3 text-blue-600" />
                     <span className="font-medium group-hover:text-blue-700">
-                      Belkadi626@gmail.com
+                      belkhadir.poterie@gmail.com
                     </span>
                   </a>
                 </div>

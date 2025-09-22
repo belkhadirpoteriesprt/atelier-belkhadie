@@ -367,7 +367,7 @@ export default function About() {
                   <br />
                   +212 661 724 956
                   <br />
-                  +212 675 202 336
+                  +212 612 989 463
                   <br />
                   0524 653 072
                 </div>
@@ -376,7 +376,7 @@ export default function About() {
                   <br />
                   Belkhadir.poterie@gmail.com
                   <br />
-                  Belkadi626@gmail.com
+                  belkhadir.poterie@gmail.com
                 </div>
               </div>
             </div>

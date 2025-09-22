@@ -212,7 +212,7 @@ export default function Privacy() {
                     <div>
                       <strong>📞 Téléphone :</strong><br />
                       +212 661 724 956<br />
-                      +212 675 202 336
+                      +212 612 989 463
                     </div>
                   </div>
                   <div className="mt-4">
