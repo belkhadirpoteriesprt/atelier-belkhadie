@@ -13,6 +13,25 @@ const client = (() => {
   return twilio(ACCOUNT_SID, AUTH_TOKEN);
 })();
 
+const PACKAGING_LABELS: Record<string, string> = {
+  none: "Sans emballage",
+  normal: "Emballage normal",
+  special: "Emballage cadeau",
+};
+
+const DELIVERY_LABELS: Record<string, string> = {
+  none: "Retrait atelier",
+  relais: "Point relais Ozon Express",
+  domicile: "Livraison à domicile",
+  programme: "Livraison programmée",
+};
+
+const PAYMENT_LABELS: Record<string, string> = {
+  livraison: "Paiement à la livraison",
+  en_ligne: "Paiement en ligne",
+  virement: "Virement / Cash Plus",
+};
+
 export async function sendVendorNotification(message: string) {
   if (!client) {
     throw new Error("Twilio non configuré (SID/TOKEN manquants)");
@@ -61,11 +80,20 @@ export class WhatsAppService {
 
     const totals = order.totals;
     const totalsSection = totals
-      ? `\n\nSous-total: ${totals.productsSubtotal.toFixed(2)} MAD` +
-        `\nEmballage: ${(totals.packaging?.fee ?? 0).toFixed(2)} MAD (${totals.packaging?.option ?? "-"})` +
-        `\nLivraison: ${(totals.delivery?.fee ?? 0).toFixed(2)} MAD (${totals.delivery?.option ?? "-"})` +
-        (totals.payment ? `\nPaiement: ${(totals.payment.fee ?? 0).toFixed(2)} MAD (${totals.payment.mode})` : "") +
-        `\nTotal: ${(totals.grandTotal ?? (totals.productsSubtotal + (totals.extrasTotal ?? 0))).toFixed(2)} MAD`
+      ? (() => {
+          const packagingLabel = totals.packaging ? PACKAGING_LABELS[totals.packaging.option] ?? totals.packaging.option : "-";
+          const deliveryLabel = totals.delivery ? DELIVERY_LABELS[totals.delivery.option] ?? totals.delivery.option : "-";
+          const paymentLabel = totals.payment ? PAYMENT_LABELS[totals.payment.mode] ?? totals.payment.mode : null;
+          const extrasLine = totals.extrasTotal && totals.extrasTotal > 0 ? `\nExtras: ${totals.extrasTotal.toFixed(2)} MAD` : "";
+          return (
+            `\n\nSous-total produits: ${totals.productsSubtotal.toFixed(2)} MAD` +
+            `\nEmballage: ${(totals.packaging?.fee ?? 0).toFixed(2)} MAD (${packagingLabel})` +
+            `\nLivraison: ${(totals.delivery?.fee ?? 0).toFixed(2)} MAD (${deliveryLabel})` +
+            (paymentLabel ? `\nMode de paiement: ${(totals.payment?.fee ?? 0).toFixed(2)} MAD (${paymentLabel})` : "") +
+            `${extrasLine}` +
+            `\nTotal estimé: ${(totals.grandTotal ?? totals.productsSubtotal + (totals.extrasTotal ?? 0)).toFixed(2)} MAD`
+          );
+        })()
       : "";
 
     const body = `${header}\n\n${customer}\n\nArticles:\n${lines.join("\n")}${totalsSection}`;
