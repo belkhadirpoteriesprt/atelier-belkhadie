@@ -156,7 +156,7 @@ export function Footer() {
           <div className="mt-4 p-3 bg-amber-700/30 rounded-lg">
             <p className="text-sm text-amber-200 text-center">
               <strong>🚚 Livraison:</strong> Uniquement au Maroc • Délai: 20-45
-              jours • Frais CTM à la charge du client • Paiement intégral requis
+              jours • Frais Ozon Express à la charge du client • Paiement intégral requis
             </p>
           </div>
         </div>
