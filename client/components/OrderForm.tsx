@@ -597,14 +597,13 @@ export function OrderForm({ cartItems, total, onClose }: OrderFormProps) {
                 </p>
                 <div className="ml-6">
                   <p>
-                    <strong>📦 Livraison assurée via CTM :</strong>
+                    <strong>📦 Livraison confiée à Ozon Express :</strong>
                   </p>
                   <ul className="list-disc list-inside ml-4 space-y-1">
-                    <li>Livraison en agence CTM ou à domicile</li>
-                    <li>Frais de livraison non inclus dans le prix affiché</li>
+                    <li>Livraison en point relais Ozon Express ou à domicile programmé</li>
+                    <li>Frais calculés selon la destination et le poids, confirmés avant expédition</li>
                     <li>
-                      Les frais de transport sont entièrement à la charge de
-                      l'acheteur, à régler lors de la réception du colis
+                      Les frais de transport sont réglés directement auprès d'Ozon Express lors de la livraison
                     </li>
                   </ul>
                 </div>
