@@ -249,7 +249,7 @@ export default function ProductDetail() {
                         Total : {(currentPrice * quantity).toFixed(2)} MAD
                       </p>
                       <p className="text-sm text-green-700">
-                        (hors frais de livraison CTM)
+                        (hors frais de livraison Ozon Express)
                       </p>
                     </div>
                   </div>
