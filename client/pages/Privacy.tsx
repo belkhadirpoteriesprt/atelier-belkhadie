@@ -70,7 +70,7 @@ export default function Privacy() {
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Nom et prénom</li>
                     <li>Numéro de téléphone</li>
-                    <li>Adresse 
+                    <li>Adresse e-mail</li>
                     <li>Adresse de livraison</li>
                     <li>Préférences de personnalisation (couleurs, motifs, tailles)</li>
                     <li>Messages et demandes spéciales</li>
@@ -130,7 +130,7 @@ export default function Privacy() {
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
                   Lorsque vous utilisez notre formulaire de personnalisation, vos informations 
-                  sont transmises via WhatsApp à notre équipe d'artisans (+212 675-202336).
+                  sont transmises via WhatsApp à notre équipe d'artisans (+212 661-724956).
                 </p>
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <h3 className="font-semibold text-green-800 mb-2">Sécurité WhatsApp :</h3>
@@ -212,13 +212,13 @@ export default function Privacy() {
                     <div>
                       <strong>📞 Téléphone :</strong><br />
                       +212 661 724 956<br />
-                      +212 675 202 336
+                      +212 612 989 463
                     </div>
                   </div>
                   <div className="mt-4">
                     <strong>📍 Adresse :</strong><br />
                     Belkhadir Poterie<br />
-                    62, village des potiers<br />
+                    67, village des potiers<br />
                     Safi, Maroc
                   </div>
                 </div>

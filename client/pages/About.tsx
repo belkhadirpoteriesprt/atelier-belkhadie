@@ -163,7 +163,7 @@ export default function About() {
                     Notre Atelier à Safi
                   </h3>
                   <p className="text-gray-700">
-                    62, village des potiers - Au cœur de la tradition
+                    67, village des potiers - Au cœur de la tradition
                   </p>
                 </div>
               </div>
@@ -355,7 +355,7 @@ export default function About() {
               <div className="flex items-center justify-center mb-4">
                 <MapPin className="w-6 h-6 text-amber-400 mr-2" />
                 <span className="text-xl font-semibold">
-                  62, village des potiers, Safi, Maroc
+                  67, village des potiers, Safi, Maroc
                 </span>
               </div>
               <p className="text-amber-200 mb-6">
@@ -367,7 +367,7 @@ export default function About() {
                   <br />
                   +212 661 724 956
                   <br />
-                  +212 675 202 336
+                  +212 612 989 463
                   <br />
                   0524 653 072
                 </div>
@@ -376,7 +376,7 @@ export default function About() {
                   <br />
                   Belkhadir.poterie@gmail.com
                   <br />
-                  Belkadi626@gmail.com
+                  belkhadir.poterie@gmail.com
                 </div>
               </div>
             </div>

@@ -93,7 +93,7 @@ export function CartCustomization({ cartItems, onClose }: CartCustomizationProps
     message += `📅 Demande envoyée le ${new Date().toLocaleString("fr-FR")}\n\n`;
     message += `🏺 *Belkhadir Poterie* - Artisanat traditionnel marocain`;
 
-    const whatsappUrl = `https://wa.me/212675202336?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/212612989463?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     onClose();
   };
@@ -164,7 +164,7 @@ export function CartCustomization({ cartItems, onClose }: CartCustomizationProps
           {/* Sélection des produits */}
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-amber-900 mb-6">
-              🏺 Sélectionnez vos créations à personnaliser
+              �� Sélectionnez vos créations à personnaliser
             </h3>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

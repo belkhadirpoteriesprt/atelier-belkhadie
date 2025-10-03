@@ -118,7 +118,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
 
 📅 Demande envoyée le ${new Date().toLocaleString("fr-FR")}`;
 
-    const whatsappUrl = `https://wa.me/212675202336?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/212612989463?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -215,13 +215,13 @@ ${customForm.freeText || "Aucune demande spéciale"}
 
                   {/* Bouton WhatsApp Standard */}
                   <a
-                    href="https://wa.me/212675202336"
+                    href="https://wa.me/212612989463"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold shadow-lg"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp: +212 675-202336
+                    WhatsApp: +212 661-724956
                   </a>
                 </div>
               </div>
@@ -229,6 +229,40 @@ ${customForm.freeText || "Aucune demande spéciale"}
           </div>
         </div>
       </div>
+
+      {/* Nos offres pour vous */}
+      <section className="py-16 bg-amber-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-8">Nos offres pour vous</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="/product/7" className="group rounded-2xl overflow-hidden border border-amber-200 shadow-lg bg-white">
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F115469c9c50c4542ae7eb015d98da681?format=webp&width=800"
+                  alt="Pack Ramadan - Table Safiote"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-2xl font-bold text-amber-900">Pack Ramadan — 589 MAD</h3>
+                <p className="text-amber-800 mt-2">Soupière, 12 bols, assiette principale, 12 petites assiettes, 2 gourdes + 12 verres, Feraqa Khmissa</p>
+                <span className="inline-block mt-4 bg-amber-600 text-white px-4 py-2 rounded-lg">Voir le pack</span>
+              </div>
+            </a>
+            <div className="grid gap-6">
+              <div className="rounded-xl border border-amber-200 p-5 bg-white">
+                <h4 className="text-xl font-semibold text-amber-900">Basique</h4>
+                <p className="text-amber-800">Soupière, 6 bols, grande assiette + 6 petites assiettes</p>
+                <a href="/product/7" className="inline-block mt-3 text-amber-700 font-semibold hover:underline">Voir</a>
+              </div>
+              <div className="rounded-xl border border-gray-200 p-5 bg-gray-50 opacity-70">
+                <h4 className="text-xl font-semibold text-gray-700">Pack spécial — Bientôt disponible</h4>
+                <p className="text-gray-600">Revenez bientôt pour le découvrir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Formulaire de Personnalisation (Modal) */}
       <AnimatePresence>
@@ -520,8 +554,8 @@ ${customForm.freeText || "Aucune demande spéciale"}
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-700 mb-4">Email</h3>
-              <a href="mailto:belkadi626@gmail.com" className="text-xl font-bold text-gray-600 hover:text-gray-800 transition-colors break-all">
-                belkadi626@gmail.com
+              <a href="mailto:belkhadir.poterie@gmail.com" className="text-xl font-bold text-gray-600 hover:text-gray-800 transition-colors break-all">
+                belkhadir.poterie@gmail.com
               </a>
               <p className="text-gray-500 mt-2">Envoyez-nous un message</p>
             </motion.div>
@@ -576,7 +610,7 @@ ${customForm.freeText || "Aucune demande spéciale"}
                   Appeler Maintenant
                 </a>
                 <a
-                  href="mailto:belkadi626@gmail.com"
+                  href="mailto:belkhadir.poterie@gmail.com"
                   className="flex items-center bg-white text-orange-700 px-8 py-4 rounded-lg hover:bg-amber-50 transition-colors font-semibold shadow-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />

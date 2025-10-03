@@ -1,15 +1,17 @@
 const twilio = require("twilio");
 
 const client = twilio(
-  "AC46c15cc5db07935af2e72fa697f8c335",
-  "b6e105e3ed7e8e3b2023e9d9a4ba438c"
+  process.env.TWILIO_ACCOUNT_SID,
+  process.env.TWILIO_AUTH_TOKEN
 );
 
-const FROM = "whatsapp:+14155238886";
-const TO   = "whatsapp:+212661724956";
+const FROM = process.env.TWILIO_FROM; // ex: whatsapp:+14155238886
+const TO   = process.env.TWILIO_TO;   // ex: whatsapp:+2126...
 
 async function sendVendorNotification(message) {
   if (!message) return;
+  if (!client) throw new Error("Twilio non configuré (SID/TOKEN manquants)");
+  if (!FROM || !TO) throw new Error("Paramètres WhatsApp manquants: FROM/TO");
   try {
     const result = await client.messages.create({
       body: message,

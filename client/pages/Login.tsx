@@ -6,7 +6,7 @@ import { Layout } from "../components/Layout";
 
 export default function Login() {
   const [formData, setFormData] = useState({
-     "",
+    email: "",
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
@@ -66,7 +66,20 @@ export default function Login() {
             className="bg-white p-8 rounded-2xl shadow-xl border border-amber-100 space-y-6"
           >
             <div>
-              
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                <Mail className="w-4 h-4 inline mr-2" />
+                Adresse e-mail
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                disabled={isLoading}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all disabled:opacity-50"
+                placeholder="vous@example.com"
+              />
             </div>
 
             <div>

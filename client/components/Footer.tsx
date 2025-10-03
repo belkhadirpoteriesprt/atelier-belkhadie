@@ -77,10 +77,10 @@ export function Footer() {
                     +212 661 724 956
                   </a>
                   <a
-                    href="tel:+212675202336"
+                    href="tel:+212612989463"
                     className="block hover:text-white transition-colors"
                   >
-                    +212 675 202 336
+                    +212 612 989 463
                   </a>
                   <a
                     href="tel:0524653072"
@@ -100,10 +100,10 @@ export function Footer() {
                     Belkhadir.poterie@gmail.com
                   </a>
                   <a
-                    href="mailto:Belkadi626@gmail.com"
+                    href="mailto:belkhadir.poterie@gmail.com"
                     className="block hover:text-white transition-colors"
                   >
-                    Belkadi626@gmail.com
+                    belkhadir.poterie@gmail.com
                   </a>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2 text-amber-200">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>62, village des potiers, Safi, Maroc</span>
+                <span>67, village des potiers, Safi, Maroc</span>
               </div>
               <p className="text-amber-200 leading-relaxed">
                 Chaque pièce est façonnée à la main avec passion et savoir-faire
@@ -129,7 +129,7 @@ export function Footer() {
         <div className="border-t border-amber-700 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-amber-200 text-sm">
-              © 2024 Belkhadir Poterie - Artisanat Marocain Authentique par
+              © {new Date().getFullYear()} Belkhadir Poterie - Artisanat Marocain Authentique par
               Idriss Belkhadir
             </p>
             <div className="flex space-x-6 text-sm">
@@ -156,7 +156,7 @@ export function Footer() {
           <div className="mt-4 p-3 bg-amber-700/30 rounded-lg">
             <p className="text-sm text-amber-200 text-center">
               <strong>🚚 Livraison:</strong> Uniquement au Maroc • Délai: 20-45
-              jours • Frais CTM à la charge du client • Paiement intégral requis
+              jours • Frais Ozon Express à la charge du client • Paiement intégral requis
             </p>
           </div>
         </div>

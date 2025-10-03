@@ -57,12 +57,12 @@ export default function Help() {
                     </span>
                   </a>
                   <a
-                    href="tel:+212675202336"
+                    href="tel:+212612989463"
                     className="flex items-center p-3 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors group"
                   >
                     <Phone className="w-4 h-4 mr-3 text-amber-600" />
                     <span className="font-medium group-hover:text-amber-700">
-                      +212 675 202 336
+                      +212 612 989 463
                     </span>
                   </a>
                   <a
@@ -93,12 +93,12 @@ export default function Help() {
                     </span>
                   </a>
                   <a
-                    href="mailto:Belkadi626@gmail.com"
+                    href="mailto:belkhadir.poterie@gmail.com"
                     className="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group"
                   >
                     <Mail className="w-4 h-4 mr-3 text-blue-600" />
                     <span className="font-medium group-hover:text-blue-700">
-                      Belkadi626@gmail.com
+                      belkhadir.poterie@gmail.com
                     </span>
                   </a>
                 </div>
@@ -111,7 +111,7 @@ export default function Help() {
                   Notre atelier à Safi
                 </h3>
                 <p className="text-green-800 font-medium">
-                  📍 62, village des potiers, Safi, Maroc
+                  📍 67, village des potiers, Safi, Maroc
                 </p>
                 <p className="text-sm text-green-700 mt-2">
                   Venez découvrir notre atelier traditionnel !
@@ -144,15 +144,15 @@ export default function Help() {
                   </p>
                 </div>
 
-                {/* CTM Delivery */}
+                {/* Ozon Express Delivery */}
                 <div className="bg-blue-50 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                    🚛 Transport CTM
+                    🚛 Transport Ozon Express
                   </h3>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>✅ Livraison en agence CTM ou à domicile</li>
-                    <li>💰 Frais de transport à votre charge</li>
-                    <li>📦 Emballage soigné et sécurisé</li>
+                    <li>✅ Livraison en point relais Ozon Express ou à domicile</li>
+                    <li>💰 Frais de transport à votre charge, confirmés avant expédition</li>
+                    <li>📦 Emballage soigné et sécurisé par notre équipe</li>
                     <li>📍 Livraison dans tout le Maroc</li>
                   </ul>
                 </div>
@@ -202,7 +202,7 @@ export default function Help() {
                     💰 Frais de livraison ?
                   </h3>
                   <p className="text-gray-700 text-sm">
-                    Calculés par CTM selon poids et destination. À régler lors
+                    Calculés par Ozon Express selon poids et destination. À régler lors
                     de la réception.
                   </p>
                 </div>
@@ -214,8 +214,8 @@ export default function Help() {
                     📦 Suivi de commande ?
                   </h3>
                   <p className="text-gray-700 text-sm">
-                    Mises à jour régulières + numéro de suivi CTM à
-                    l'exp��dition.
+                    Mises à jour régulières + numéro de suivi Ozon Express à
+                    l'expédition.
                   </p>
                 </div>
 
@@ -244,7 +244,7 @@ export default function Help() {
                 🤝 Nous sommes là pour vous aider !
               </h3>
               <p className="text-gray-700 mb-6">
-                Notre équipe passionnée est à votre disposition pour répondre à
+                Notre équipe passionnée est �� votre disposition pour répondre à
                 toutes vos questions sur nos cr��ations artisanales.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

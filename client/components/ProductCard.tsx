@@ -28,7 +28,7 @@ export function ProductCard({ product }: ProductCardProps) {
     >
       <div className="aspect-square overflow-hidden relative">
         <img
-          src={getVariantImage(product, product.sizeVariants[0].id)}
+          src={product.image}
           alt={product.name}
           className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
         />

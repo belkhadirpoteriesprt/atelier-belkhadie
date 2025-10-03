@@ -51,8 +51,8 @@ export default function Terms() {
                   <ul className="space-y-1 text-amber-700">
                     <li><strong>Dénomination :</strong> Belkhadir Poterie</li>
                     <li><strong>Dirigeant :</strong> Idriss Belkhadir</li>
-                    <li><strong>Adresse :</strong> 62, village des potiers, Safi, Maroc</li>
-                    <li><strong>Téléphone :</strong> +212 661 724 956 / +212 675 202 336</li>
+                    <li><strong>Adresse :</strong> 67, village des potiers, Safi, Maroc</li>
+                    <li><strong>Téléphone :</strong> +212 661 724 956 / +212 612 989 463</li>
                     <li><strong>Email :</strong> Belkhadir.poterie@gmail.com</li>
                   </ul>
                 </div>
@@ -99,7 +99,7 @@ export default function Terms() {
                     <li>Confirmation des détails et du prix par notre équipe</li>
                     <li>Paiement intégral avant production</li>
                     <li>Fabrication artisanale de votre commande</li>
-                    <li>Livraison via CTM</li>
+                    <li>Livraison via Ozon Express</li>
                   </ol>
                 </div>
 
@@ -139,7 +139,7 @@ export default function Terms() {
                 </div>
                 
                 <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                  <h3 className="font-semibold text-blue-800 mb-2">ℹ️ Facteurs influençant les délais :</h3>
+                  <h3 className="font-semibold text-blue-800 mb-2">��️ Facteurs influençant les délais :</h3>
                   <ul className="list-disc list-inside space-y-1 text-blue-700">
                     <li>Complexité des motifs demandés</li>
                     <li>Nombre de pièces commandées</li>
@@ -161,8 +161,8 @@ export default function Terms() {
                 <div>
                   <h3 className="text-lg font-semibold text-amber-800 mb-3">🚛 Transporteur :</h3>
                   <p>
-                    Toutes nos livraisons sont effectuées via <strong>CTM</strong> 
-                    (Compagnie de Transports au Maroc), transporteur officiel et fiable.
+                    Toutes nos livraisons sont effectuées via <strong>Ozon Express</strong>,
+                    partenaire logistique spécialisé dans le transport sécurisé au Maroc.
                   </p>
                 </div>
 
@@ -170,19 +170,19 @@ export default function Terms() {
                   <h3 className="text-lg font-semibold text-amber-800 mb-3">📦 Options de livraison :</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
-                      <h4 className="font-semibold text-amber-800 mb-2">🏢 En agence CTM</h4>
+                      <h4 className="font-semibold text-amber-800 mb-2">🏢 Point relais Ozon Express</h4>
                       <ul className="text-sm text-amber-700 space-y-1">
-                        <li>• Retrait dans l'agence CTM la plus proche</li>
-                        <li>• Frais réduits</li>
-                        <li>• Horaires d'ouverture étendus</li>
+                        <li>• Retrait dans un point relais Ozon Express proche de chez vous</li>
+                        <li>• Frais optimisés</li>
+                        <li>• Notifications de disponibilité avant retrait</li>
                       </ul>
                     </div>
                     <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
-                      <h4 className="font-semibold text-amber-800 mb-2">🏠 À domicile</h4>
+                      <h4 className="font-semibold text-amber-800 mb-2">🏠 Livraison à domicile</h4>
                       <ul className="text-sm text-amber-700 space-y-1">
-                        <li>• Livraison directe chez vous</li>
-                        <li>• Frais supplémentaires</li>
-                        <li>• Selon disponibilité CTM</li>
+                        <li>• Livraison directe chez vous par Ozon Express</li>
+                        <li>• Frais supplémentaires selon la ville</li>
+                        <li>• Sous réserve de disponibilité Ozon Express</li>
                       </ul>
                     </div>
                   </div>
@@ -192,8 +192,8 @@ export default function Terms() {
                   <h3 className="font-semibold text-yellow-800 mb-2">💰 Frais de livraison :</h3>
                   <ul className="list-disc list-inside space-y-1 text-yellow-700">
                     <li>Les frais de transport sont entièrement à la charge de l'acheteur</li>
-                    <li>Payables directement à CTM lors de la réception</li>
-                    <li>Tarifs variables selon destination et poids</li>
+                    <li>Payables directement à Ozon Express lors de la réception</li>
+                    <li>Tarifs variables selon destination, poids et option choisie</li>
                     <li>Devis de transport fourni avant expédition</li>
                   </ul>
                 </div>
@@ -253,20 +253,20 @@ export default function Terms() {
                   <div className="bg-white/10 rounded-lg p-4">
                     <h3 className="font-semibold mb-2">📞 Par téléphone :</h3>
                     <p>+212 661 724 956</p>
-                    <p>+212 675 202 336</p>
+                    <p>+212 612 989 463</p>
                     <p>0524 653 072</p>
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4">
                     <h3 className="font-semibold mb-2">📧 Par  :</h3>
                     <p>Belkhadir.poterie@gmail.com</p>
-                    <p>Belkadi626@gmail.com</p>
+                    <p>belkhadir.poterie@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="bg-white/10 rounded-lg p-4">
                   <h3 className="font-semibold mb-2">📍 Visite d'atelier :</h3>
-                  <p>62, village des potiers, Safi, Maroc</p>
+                  <p>67, village des potiers, Safi, Maroc</p>
                   <p>Ouvert du lundi au samedi, de 8h à 18h</p>
                 </div>
 

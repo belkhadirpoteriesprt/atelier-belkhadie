@@ -227,7 +227,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Qassria Traditionnelle",
-    basePrice: 50,
+    basePrice: 60,
     category: "Poterie décorative",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fab239efef22f431e8fcb3e14300660b8?format=webp&width=400",
     description:
@@ -235,22 +235,22 @@ export const products: Product[] = [
     sizeVariants: [
       { 
         id: "35cm", 
-        size: "35 cm", 
-        price: 50, 
+        size: "35 cm",
+        price: 60, 
         description: "Petite taille",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fab239efef22f431e8fcb3e14300660b8?format=webp&width=400"
       },
       { 
         id: "40cm", 
-        size: "40 cm", 
-        price: 60, 
+        size: "40 cm",
+        price: 70, 
         description: "Taille moyenne",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F4b0e13d990aa4159a1e08db525e89746?format=webp&width=400"
       },
       { 
         id: "45cm", 
-        size: "45 cm", 
-        price: 70, 
+        size: "45 cm",
+        price: 80, 
         description: "Grande taille",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fab239efef22f431e8fcb3e14300660b8?format=webp&width=400"
       },
@@ -262,7 +262,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Tajine",
-    basePrice: 10,
+    basePrice: 15,
     category: "Art de la table",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fa927d76d2a344e26a0e874259409829b?format=webp&width=400",
     description: "Tajine traditionnel marocain",
@@ -270,7 +270,7 @@ export const products: Product[] = [
       {
         id: "12cm",
         size: "12 cm",
-        price: 10,
+        price: 15,
         description: "Tajine individuel",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fa927d76d2a344e26a0e874259409829b?format=webp&width=400"
       },
@@ -282,29 +282,36 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Assiettes",
-    basePrice: 8,
+    basePrice: 13,
     category: "Art de la table",
-    image: "https://images.unsplash.com/photo-1578749760903-03b75f5edffc?w=400&h=400&fit=crop",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2Fd4b08337dd0b4e56998265fd19c2b1c1?format=webp&width=800",
     description: "Collection d'assiettes traditionnelles en terre cuite",
     sizeVariants: [
       {
         id: "petite",
         size: "Petite assiette",
-        price: 8,
+        price: 13,
         description: "Assiette individuelle",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Ff3e53dadda404802bd643e83ce72c310?format=webp&width=400"
       },
       {
         id: "service_complet",
         size: "Grande + 6 petites",
-        price: 60,
+        price: 70,
         description: "1 grande assiette + 6 petites assiettes",
+        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb2fea3dac3ba45baae6ddcb69815359c?format=webp&width=400"
+      },
+      {
+        id: "service_complet_12",
+        size: "Grande + 12 petites",
+        price: 110,
+        description: "1 grande assiette + 12 petites assiettes",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb2fea3dac3ba45baae6ddcb69815359c?format=webp&width=400"
       },
       {
         id: "rectangulaire",
         size: "Assiette rectangulaire",
-        price: 45,
+        price: 55,
         description: "Format rectangulaire pour présentation",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F7984cf5bc73c4bb083c034e5308b4c20?format=webp&width=400"
       },
@@ -316,37 +323,30 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Soupière et Bols",
-    basePrice: 8,
+    basePrice: 10,
     category: "Art de la table",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400",
     description: "Service de soupe traditionnel et bols individuels",
     sizeVariants: [
       {
-        id: "bol_8cm",
-        size: "Bol 8cm",
-        price: 8,
-        description: "Bol petit format",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
-      },
-      {
         id: "bol_12cm",
         size: "Bol 12cm",
-        price: 10,
+        price: 15,
         description: "Bol grand format",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
-      },
-      {
-        id: "soupiere_6bols_8cm",
-        size: "Soupière + 6 bols 8cm",
-        price: 70,
-        description: "Service complet avec bols 8cm",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
       {
         id: "soupiere_6bols_12cm",
         size: "Soupière + 6 bols 12cm",
-        price: 80,
+        price: 90,
         description: "Service complet avec bols 12cm",
+        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
+      },
+      {
+        id: "soupiere_12bols",
+        size: "Soupière + 12 bols",
+        price: 120,
+        description: "Service complet 12 bols",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2Fb3da53b73a6c4243aeac4177f3f8f545?format=webp&width=400"
       },
     ],
@@ -357,31 +357,24 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Gourde et Verres",
-    basePrice: 15,
+    basePrice: 25,
     category: "Art de la table",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F5d0532bd8dd84b259a455c07d215e98a?format=webp&width=400",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F3eecfc4b088a4045886529b23b62a3fb?format=webp&width=800",
     description: "Service à boire traditionnel en terre cuite",
     sizeVariants: [
       {
-        id: "verre_assiette",
-        size: "Verre + Assiette",
-        price: 15,
-        description: "Verre avec assiette assortie",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F5d0532bd8dd84b259a455c07d215e98a?format=webp&width=400"
-      },
-      {
         id: "gourde_seule",
         size: "Gourde seule",
-        price: 50,
+        price: 60,
         description: "Gourde traditionnelle uniquement",
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F1a41d7d58f6445a0b2b55caf52dcdafb?format=webp&width=400"
       },
       {
         id: "pack_complet",
-        size: "Gourde + 6 verres + 6 assiettes",
-        price: 90,
+        size: "Gourde + 6 verres",
+        price: 120,
         description: "Service complet à boire",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F1a41d7d58f6445a0b2b55caf52dcdafb?format=webp&width=400"
+        image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F3eecfc4b088a4045886529b23b62a3fb?format=webp&width=800"
       },
     ],
     availablePatterns: commonPatterns,
@@ -425,13 +418,6 @@ export const products: Product[] = [
         image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F7b7636748fbe45379816dd330558bd96?format=webp&width=400"
       },
       {
-        id: "traditionnelle",
-        size: "Traditionnelle",
-        price: 60,
-        description: "Modèle traditionnel classique",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Fd8cf247061ae4e73b8c8529275e40675%2F6cee35b1b28f4f96a3f3db53b74303e8?format=webp&width=400"
-      },
-      {
         id: "floral",
         size: "Floral",
         price: 65,
@@ -453,25 +439,30 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Table Safiote",
-    basePrice: 600,
+    basePrice: 450,
     category: "Formules spéciales",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop",
-    description: "Formule complète pour table familiale traditionnelle de Safi",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800",
+    description: "Formule complète pour table familiale traditionnelle de Safi — il contient: khmissa, bolbol, soupiere+6bols, gourde+6verres, assiettes a œufs, assiette rectangulaire, assiette principal + 6 petites",
     sizeVariants: [
       {
-        id: "formule_complete",
-        size: "Formule complète",
-        price: 600,
-        description: "1 soupière + 12 bols 8cm, 2 grandes assiettes + 24 petites, 2 assiettes rectangulaires, 3 feraqa au choix",
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop"
+        id: "pack_ramadan",
+        size: "Pack Ramadan",
+        price: 589,
+        description: "Soupière, 12 bols, assiette principale, 12 petites assiettes, 2 gourdes + 12 verres, Feraqa Khmissa",
+        image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F115469c9c50c4542ae7eb015d98da681?format=webp&width=800"
+      },
+      {
+        id: "basique",
+        size: "Basique",
+        price: 450,
+        description: "Soupière, 6 bols, grande assiette + 6 petites assiettes",
+        image: "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800"
       },
     ],
     availablePatterns: commonPatterns,
     images: {
       "gallery": [
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1578749760903-03b75f5edffc?w=400&h=400&fit=crop"
+        "https://cdn.builder.io/api/v1/image/assets%2F824f8aaff68a4f99a0fe43e0196f68c2%2F9148012ea4b44856aef18faa1b6c90b2?format=webp&width=800"
       ]
     },
   },
